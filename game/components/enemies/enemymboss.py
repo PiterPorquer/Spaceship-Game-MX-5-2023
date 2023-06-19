@@ -1,13 +1,13 @@
 import random
 from game.utils.constants import SCREEN_WIDTH, SCREEN_HEIGHT, LEFT, RIGHT
-class Enemy:
+class EnemyMiniBoss:
 
     X_POS_LIST = [50, 150, 250, 350, 450, 550, 650, 750, 850, 950]
     Y_POS = 0
-    SPEED_X = 3
-    SPEED_Y = 7
+    SPEED_X = 15
+    SPEED_Y = 1
     MOV_X = [LEFT, RIGHT]
-    INTERVAL = 30
+    INTERVAL = 80
 
     def __init__ (self, image):
         self.image = image
