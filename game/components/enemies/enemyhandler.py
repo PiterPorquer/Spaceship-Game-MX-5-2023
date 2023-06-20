@@ -20,7 +20,7 @@ class EnemyHandler:
     def add_enemy (self):
         if len(self.enemies) < 8:
             self.enemies.append(Ship())
-        if len (self.enemies) == 3:
+        if len (self.enemies) < 3:
             self.enemies.append(MiniBoss())
     
     def remove_enemy(self, enemy):
