@@ -18,7 +18,7 @@ class EnemyHandler:
             enemy.draw(screen)
 
     def add_enemy (self):
-        if len(self.enemies) < 8:
+        if len(self.enemies) <= 2:
             self.enemies.append(Ship())
         if len (self.enemies) < 3:
             self.enemies.append(MiniBoss())

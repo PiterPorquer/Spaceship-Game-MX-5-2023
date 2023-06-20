@@ -1,5 +1,5 @@
 import pygame
-from game.components.enemies.enemymboss import EnemyMiniBoss
+from game.components.enemies.enemy import EnemyMiniBoss
 from game.utils.constants import ENEMY_2
 
 class MiniBoss(EnemyMiniBoss):
