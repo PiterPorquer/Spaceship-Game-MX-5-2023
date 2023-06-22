@@ -26,7 +26,7 @@ class Enemy:
     def update(self, bullet_handler):
         if self.rect.y >= SCREEN_HEIGHT:
             self.is_alive = False
-            self.shooting_time += 1
+        self.shooting_time += 1
         self.move()
         self.shoot(bullet_handler)
 
@@ -51,16 +51,17 @@ class Enemy:
 
     def shoot (self, bullet_handler):
         if self.shooting_time % self.SHOOTING_TIME == 0:
-            bullet_handler.add.bullet(BULLET_ENEMY_TYPE, (self.rect.center))
+            bullet_handler.add_bullet(BULLET_ENEMY_TYPE, (self.rect.center))
 
 class EnemyMiniBoss:
 
     X_POS_LIST = [50, 150, 250, 350, 450, 550, 650, 750, 850, 950]
     Y_POS = 0
-    SPEED_X = 15
-    SPEED_Y = 1
+    SPEED_X = 7
+    SPEED_Y = 3
     MOV_X = [LEFT, RIGHT]
-    INTERVAL = 80
+    INTERVAL = SCREEN_WIDTH // 2
+    SHOOTING_TIME = 10
 
     def __init__ (self, image):
         self.image = image
@@ -100,6 +101,6 @@ class EnemyMiniBoss:
 
     def shoot (self, bullet_handler):
         if self.shooting_time % self.SHOOTING_TIME == 0:
-            bullet_handler.add.bullet(BULLET_ENEMY_TYPE, (self.rect.center))
+            bullet_handler.add_bullet(BULLET_ENEMY_TYPE, (self.rect.center))
 
 

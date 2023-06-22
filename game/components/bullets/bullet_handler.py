@@ -19,6 +19,7 @@ class BulletHandler:
     def add_bullet(self, type, center):
         if type ==  BULLET_ENEMY_TYPE:
             self.bullets.append(BulletEnemy(center))
+            
 
     def remove_bullet(self, bullet):
         self.bullets.remove(bullet)

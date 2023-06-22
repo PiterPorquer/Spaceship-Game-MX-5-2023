@@ -12,7 +12,7 @@ class Bullet:
             self.is_alive = False
         if self.rect.colliderect(object.rect):
             object.is_alive = False
-            self.is_Alive = False
+            self.is_alive = False
 
     def draw (self, screen):
         screen.blit(self.image, self.rect)
